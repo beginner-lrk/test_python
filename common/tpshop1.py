@@ -18,7 +18,7 @@ class TestCalculalor(unittest.TestCase):
         result=c.add()
         self.assertEqual(result,8)
     def test_sub(self):
-        d=Calculalor(7,3)
+        d=Calculalor(4,3)
         result=d.sub()
         self.assertEqual(result,4)
     def test_mul(self):

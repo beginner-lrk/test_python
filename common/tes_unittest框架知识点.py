@@ -4,7 +4,8 @@
 1. TestCase:测试用例
 2. TestSuite:测试套件，多个测试用例集合在一起
 3. TestRunner：执行测试用例和测试套件
-4. TestLoader：加载TestCase到TestSuite中，并把测试用例封装成测试套件
+4. TestLoader：加载TestCase到TestSuite中，并把测试用例封装成测试套件；使用unittest.TestLoader，通过该类下面的discover()方法自动搜索指定目录下指定开头的.py文件
+，并将查找到的测试用例组装到测试套件
 5. Fixture：初始化测试环境或销毁就是一个Fixture
 '''
 '''
@@ -19,7 +20,7 @@ Testcase使用：
         调用 unittest.main() 来运行
 '''
 '''
-TestSuite使用
+TestSuite使用：
 1. 实例化： suite = unittest.TestSuite()
 (suite：为TestSuite实例化的名称)
 2. 添加用例：suite.addTest(ClassName("MethodName"))        这个不推荐，后面还有更好的
@@ -29,9 +30,23 @@ TestSuite使用
 '''
 '''
 TestRunner的使用：
-1. 实例化： runner = unittest.TextTestRunner()
-2. 执行：   runner.run(suite) # suite：为测试套件名称
+1. 导包
+2. 实例化： runner = unittest.TextTestRunner()
+3. 执行：   runner.run(suite) # suite：为测试套件名称
 '''
+'''
+TestLoader：
+1.导包
+2.调用Testload()
+  写法1：site = unittest.TestLoader().discover("指定文件的文件目录","指定字母开头的")
+  写法2：site = unittest.defaultTestLoader.discover("指定文件的文件目录","指定字母开头的")
+'''
+'''
+TestLoader和TestSuite区别：
+ 共同点都是测试套件
+ 不同点实现方法不同
+ TestSuite：需要手动添加测试用例（可以添加测试类，也可以添加测试类中某个测试方法）
+ TestLoader：搜索指定目录下指定开头.py文件，并添加测试类中的所有的测试方法，不能指定添加测试方
+法
 '''
 
-'''

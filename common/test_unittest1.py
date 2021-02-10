@@ -14,7 +14,7 @@ from test_unitsample import Calculalor
 #定义测试类并继承
 class TestCalculalor(unittest.TestCase):
     def test_add(self):
-        c=Calculalor(5,3)
+        c=Calculalor(1,2)
         result=c.add()
         self.assertEqual(result,8)
     def test_sub(self):
