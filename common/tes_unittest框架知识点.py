@@ -49,4 +49,19 @@ TestLoader和TestSuite区别：
  TestLoader：搜索指定目录下指定开头.py文件，并添加测试类中的所有的测试方法，不能指定添加测试方
 法
 '''
+'''
+Fixture:
+主要用到类和方法，
+    @classmethod   #修饰器修饰类方法
+    def setUpClass(cls):
+        print("开始执行类")
+    @classmethod
+    def tearDownClass(cls):
+        print("类执行完毕")
+        
+    def setUp(self):
+        print("执行方法开始")
+    def tearDown(self):
+        print("执行方法结束")
+'''
 

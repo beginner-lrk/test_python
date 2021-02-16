@@ -13,14 +13,29 @@ import unittest
 from test_unitsample import Calculalor
 #定义测试类并继承
 class TestCalculalor(unittest.TestCase):
+    @classmethod   #修饰器修饰类方法
+    def setUpClass(cls):
+        print("开始执行类")
+    @classmethod
+    def tearDownClass(cls):
+        print("类执行完毕")
+    def setUp(self):
+        print("执行方法开始")
+    def tearDown(self):
+        print("执行方法结束")
+
     def test_add(self):
         c=Calculalor(5,3)
         result=c.add()
         self.assertEqual(result,8)
     def test_sub(self):
         d=Calculalor(7,3)
-        result=d.sub()
-        self.assertEqual(result,4)
+        dd=d.sub()
+        if dd > 1:
+            result = True
+        else:
+            result = False
+        self.assertTrue(result)
     def test_mul(self):
         e=Calculalor(4,4)
         result = e.rid()
