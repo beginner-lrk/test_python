@@ -19,3 +19,11 @@ class Test01(unittest.TestCase):
         except_result = ADD(x,y)
         assert(result,except_result)
 #最后使用script下的run_testloader.py执行
+if __name__ == '__main__' :
+    #实例化对象，对象名为自定义
+    site=unittest.TestSuite()
+    #调用测试方法
+    site.addTest(unittest.makeSuite(Test01))
+    #Test执行测试套件
+    runner=unittest.TextTestRunner()
+    runner.run(site)
