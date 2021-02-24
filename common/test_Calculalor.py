@@ -1,6 +1,9 @@
 #! /usr/bin/python
 # -*- coding: UTF-8 -*-
 # @Time : 2021/2/9 9:10
+
+
+#传统函数执行测试用例
 from test_unitsample import Calculalor
 
 
@@ -19,17 +22,21 @@ def test_sub():
 def test_rid():
     ed = Calculalor(8, 9)
     result = ed.rid()
-    assert result == 70, '乘法运算失败！'
+    assert result == 72, '乘法运算失败！'
 
 
 def test_div():
     fd = Calculalor(9, 2)
     result = fd.div()
-    assert result == 4.5, '触发运算失败'
-
+    assert result == 4,'触发运算失败'
 
 if __name__ == '__main__':
     test_add()
     test_rid()
     test_sub()
     test_div()
+'''
+__name__:为python中内置变量
+1.如果当前运行的模块为当前模块，那么__name__的值为：__main__
+2.如果当前运行的模块不是主模块(比如这个模块被别的模块引用了)，那么__name__的值为：模块名称(test_Calculalor)
+'''
