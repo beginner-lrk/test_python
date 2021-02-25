@@ -5,7 +5,7 @@ import unittest
 #调用方法
 #site=unittest.TestLoader().discover("../common")
 #扩展 执行指定文件目录下的所有套件 方法
-site = unittest.TestLoader().discover("../common",pattern="test_req*.py")
+site = unittest.TestLoader().discover("../potest",pattern="test_bai*.py")
 #扩展  defaultTestLoader = TestLoader()
 #site = unittest.defaultTestLoader.discover("../common",pattern="tpshop*.py")
 #执行 套件 方法 TexttestRunner
