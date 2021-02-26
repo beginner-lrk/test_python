@@ -1,6 +1,8 @@
 #! /usr/bin/pythpyon
 # -*- coding: UTF-8 -*-
 # @Time : 2021/2/26 14:53
+import traceback
+
 import pymysql
 #step1：数据库链接
 conn = pymysql.Connect(host="192.1.3.149",
@@ -20,6 +22,7 @@ try:
     # 如果上述两条 SQL 语句执行正常,手动提交
     conn.commit()
 except Exception as e:
+    # traceback.print_exc(file = open('./log.txt', 'sql1'))
     print(e)
     #数据库操作回滚
     conn.rollback()

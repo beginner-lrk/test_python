@@ -2,9 +2,8 @@
 # -*- coding: UTF-8 -*-
 # @Time : 2021/2/26 10:41
 import pymysql
-
 #step1:创建连接，调用connect函数
-conn = pymysql.Connect(host="192.1.3.149",
+conn = pymysql.Connect(host="",
                        port=3306,
                        database="woa_scrm",
                        user="woa",
