@@ -5,7 +5,7 @@ import traceback
 
 import pymysql
 #step1：数据库链接
-conn = pymysql.Connect(host="192.1.3.149",
+conn = pymysql.Connect(host="",
                        port=3306,
                        database="woa_usercenter",
                        user="woa",
